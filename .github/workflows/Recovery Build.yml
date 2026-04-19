@@ -112,9 +112,23 @@ jobs:
         export LC_ALL=C
         export FOX_BUILD_DEVICE=${{ github.event.inputs.DEVICE_NAME }}
         set -e
-        lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && mka adbd ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc --all)
+        PRODUCT=${{ github.event.inputs.MAKEFILE_NAME }}
+        LUNCH_COMBO=""
+        for RELEASE in ap2a trunk_staging; do
+          if lunch ${PRODUCT}-${RELEASE}-eng; then
+            LUNCH_COMBO="${PRODUCT}-${RELEASE}-eng"
+            break
+          fi
+        done
+
+        if [ -z "$LUNCH_COMBO" ]; then
+          echo "[FATAL] No valid lunch combo found for ${PRODUCT}"
+          exit 1
+        fi
+
+        echo "[INFO] Using lunch combo: ${LUNCH_COMBO}"
+        mka adbd ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc --all)
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
-      continue-on-error: true
 
     - name: Check the output directory before uploading
       run: |
