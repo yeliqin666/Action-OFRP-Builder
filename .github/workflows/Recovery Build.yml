@@ -32,7 +32,7 @@ on:
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'umi'
+        default: 'lmi'
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME'
         required: true
@@ -183,17 +183,22 @@ jobs:
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Check the output directory before uploading
+      id: output
       run: |
-        ls -al ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/
-        echo
-        ls -al ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/
+        PRODUCT_DIR=${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product
+        ls -al "$PRODUCT_DIR"/
+        # Auto-detect actual product subdirectory (PRODUCT_DEVICE may differ from DEVICE_NAME)
+        ACTUAL_DEVICE=$(ls -d "$PRODUCT_DIR"/*/ | head -1 | xargs basename)
+        echo "actual_device=$ACTUAL_DEVICE" >> $GITHUB_OUTPUT
+        echo "[INFO] Detected product device: $ACTUAL_DEVICE"
+        ls -al "$PRODUCT_DIR/$ACTUAL_DEVICE/"
 
     - name: Upload to Release
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.img
-          ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.zip
+          ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ steps.output.outputs.actual_device }}/*.img
+          ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ steps.output.outputs.actual_device }}/*.zip
         name: ${{ github.event.inputs.DEVICE_NAME }}-${{ github.run_id }}
         tag_name: ${{ github.run_id }}
         body: |
