@@ -1,0 +1,236 @@
+﻿2026-04-19T16:14:14.7851148Z ##[group]Run rokibhasansagar/slimhub_actions@main
+2026-04-19T16:14:14.7851822Z with:
+2026-04-19T16:14:14.7852209Z ##[endgroup]
+2026-04-19T16:14:14.7966597Z ##[group]Run chmod a+x $GITHUB_ACTION_PATH/cleanup.sh
+2026-04-19T16:14:14.7967422Z [36;1mchmod a+x $GITHUB_ACTION_PATH/cleanup.sh[0m
+2026-04-19T16:14:14.7968107Z [36;1mbash $GITHUB_ACTION_PATH/cleanup.sh[0m
+2026-04-19T16:14:14.8041716Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-04-19T16:14:14.8042419Z env:
+2026-04-19T16:14:14.8042796Z   retain: 
+2026-04-19T16:14:14.8043171Z ##[endgroup]
+2026-04-19T16:14:14.8202317Z [33;1;2m
+2026-04-19T16:14:14.8203364Z   ╔══════════════════════════════════════════════════════════════╗
+2026-04-19T16:14:14.8204473Z   ║                                                              ║
+2026-04-19T16:14:14.8205598Z   ║                Github Workflow Cleaner Action                ║
+2026-04-19T16:14:14.8206924Z   ║      --------------------------------------------------      ║
+2026-04-19T16:14:14.8207730Z   ║        Please Go Through The README.md File Properly.        ║
+2026-04-19T16:14:14.8208735Z   ║     ----------------------------------------------------     ║
+2026-04-19T16:14:14.8209460Z   ║                 Visit Here & Read Carefully:                 ║
+2026-04-19T16:14:14.8210575Z   ║  https://github.com/rokibhasansagar/slimhub_actions/#readme  ║
+2026-04-19T16:14:14.8211333Z   ║                                                              ║
+2026-04-19T16:14:14.8212026Z   ╚══════════════════════════════════════════════════════════════╝
+2026-04-19T16:14:14.8212415Z 
+2026-04-19T16:14:15.8264645Z [0m::group::<{[<]}> Raw Disk Space Before Cleanup <{[>]}>
+2026-04-19T16:14:15.8420814Z Use%   Used  Avail
+2026-04-19T16:14:15.8421710Z  38% 56346M 92315M
+2026-04-19T16:14:15.8423947Z ##[endgroup]
+2026-04-19T16:14:15.8425605Z ##[group] {[+]}  Temporary Apt Cache Update
+2026-04-19T16:14:15.9992232Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-04-19T16:14:16.0530375Z Hit:2 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+2026-04-19T16:14:16.0533174Z Get:6 https://dl.google.com/linux/chrome-stable/deb stable InRelease [1825 B]
+2026-04-19T16:14:16.0569308Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+2026-04-19T16:14:16.0643263Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+2026-04-19T16:14:16.0668900Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+2026-04-19T16:14:16.0686059Z Hit:7 https://packages.microsoft.com/repos/azure-cli jammy InRelease
+2026-04-19T16:14:16.0725489Z Get:8 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+2026-04-19T16:14:16.3363460Z Get:9 https://dl.google.com/linux/chrome-stable/deb stable/main amd64 Packages [1218 B]
+2026-04-19T16:14:16.3772007Z Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3401 kB]
+2026-04-19T16:14:16.3973453Z Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [517 kB]
+2026-04-19T16:14:16.3995898Z Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [19.6 kB]
+2026-04-19T16:14:16.4011233Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [5693 kB]
+2026-04-19T16:14:16.4333636Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [1093 kB]
+2026-04-19T16:14:16.4392920Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1262 kB]
+2026-04-19T16:14:16.4471603Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [316 kB]
+2026-04-19T16:14:16.4498523Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [30.5 kB]
+2026-04-19T16:14:16.5767164Z Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3137 kB]
+2026-04-19T16:14:16.5938344Z Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [446 kB]
+2026-04-19T16:14:16.6422369Z Get:20 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [14.1 kB]
+2026-04-19T16:14:16.6452420Z Get:21 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [5525 kB]
+2026-04-19T16:14:16.6747709Z Get:22 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [1063 kB]
+2026-04-19T16:14:16.6883029Z Get:23 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1025 kB]
+2026-04-19T16:14:16.7002632Z Get:24 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe Translation-en [226 kB]
+2026-04-19T16:14:16.7024656Z Get:25 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [22.8 kB]
+2026-04-19T16:14:16.7035993Z Get:26 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [331 kB]
+2026-04-19T16:14:16.7115081Z Get:27 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [150 kB]
+2026-04-19T16:14:16.7141897Z Get:28 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [21.9 kB]
+2026-04-19T16:14:23.5601323Z Fetched 24.7 MB in 3s (7510 kB/s)
+2026-04-19T16:14:24.6281746Z Reading package lists...
+2026-04-19T16:14:24.6402822Z ##[endgroup]
+2026-04-19T16:14:24.6403249Z ##[group] {[-]}  Clearing Homebrew
+2026-04-19T16:14:25.0728846Z ==> Running in non-interactive mode because `$NONINTERACTIVE` is set.
+2026-04-19T16:14:26.5613816Z ==> /usr/bin/sudo /usr/bin/find /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/etc /home/linuxbrew/.linuxbrew/include /home/linuxbrew/.linuxbrew/lib /home/linuxbrew/.linuxbrew/opt /home/linuxbrew/.linuxbrew/sbin /home/linuxbrew/.linuxbrew/share /home/linuxbrew/.linuxbrew/var /home/linuxbrew/.linuxbrew/Frameworks -depth -type d -empty -exec rmdir {} ;
+2026-04-19T16:14:26.6060300Z ##[endgroup]
+2026-04-19T16:14:26.6061048Z ##[group] {[-]}  Clearing Docker Image Caches
+2026-04-19T16:14:26.6061577Z The Following Docker Images Is Being Purged...
+2026-04-19T16:14:26.6813142Z ##[endgroup]
+2026-04-19T16:15:58.2456710Z ##[group] {[-]}  Uninstalling and Purging apt Packages
+2026-04-19T16:15:58.2464757Z [i] List of apt Packages to be Removed:   docker-buildx-plugin docker-ce-cli docker-ce containerd.io podman buildah skopeo containers-common kubectl temurin-*-jdk adoptopenjdk-* adoptium-ca-certificates openjdk-* ant ant-optional postgresql-* libpq-dev libmysqlclient* msodbcsql* mssql-tools unixodbc-dev mysql-client* mysql-common mysql-server* php*-*sql sphinxsearch mongodb* firefox google-chrome-stable microsoft-edge-stable xvfb apache2 apache2-* nginx nginx-* php-* php7* php8* session-manager-plugin azure-cli google-cloud-cli heroku gh subversion mercurial vim vim-* dotnet* aspnetcore* mono-* mono* libmono-* libmono* monodoc* msbuild nuget ruby* rake ri g++-9 g++-10 g++-12 gcc-9 gcc-10 gcc-12 gfortran-* clang-* libclang* llvm-* libllvm* lldb-* lld-* clang-format-* clang-tidy-* powershell r-base* r-cran* r-doc* r-recommended snapd man-db manpages libgtk-3-* ubuntu-mono *-icon-theme imagemagick imagemagick-6-common libgl1-mesa-dri firebird* hhvm 
+2026-04-19T16:15:59.8356952Z [i] Skipping Non-existing apt Packages: containers-common adoptopenjdk-* hhvm
+2026-04-19T16:18:40.3098326Z 
+2026-04-19T16:18:40.3099029Z WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+2026-04-19T16:18:40.3099898Z 
+2026-04-19T16:18:40.6857446Z Reading package lists...
+2026-04-19T16:18:40.9268872Z Building dependency tree...
+2026-04-19T16:18:40.9274067Z Reading state information...
+2026-04-19T16:18:41.1130557Z 0 upgraded, 0 newly installed, 0 to remove and 17 not upgraded.
+2026-04-19T16:18:41.1233234Z ##[endgroup]
+2026-04-19T16:18:41.1234699Z ##[group] {[-]}  Purging Unnecessary Files and Directories
+2026-04-19T16:18:41.2542321Z Purging /home/linuxbrew
+2026-04-19T16:18:41.2576686Z Purging /usr/bin/docker-credential-ecr-login
+2026-04-19T16:18:41.2633483Z Purging /usr/local/bin/docker-compose
+2026-04-19T16:18:41.2662155Z Purging /usr/bin/docker-credential-ecr-login
+2026-04-19T16:18:41.2695290Z Purging /usr/local/bin/kind
+2026-04-19T16:18:41.2734589Z Purging /usr/local/bin/helm
+2026-04-19T16:18:41.2798548Z Purging /usr/local/bin/kustomize
+2026-04-19T16:18:41.2847806Z Purging /usr/local/bin/terraform
+2026-04-19T16:18:41.2889586Z Purging /usr/local/bin/minikube
+2026-04-19T16:18:41.7856534Z Purging /usr/local/lib/android/sdk/build-tools
+2026-04-19T16:18:41.8270292Z Purging /usr/local/lib/android/sdk/licenses
+2026-04-19T16:18:42.1305049Z Purging /usr/local/lib/android/sdk/cmdline-tools
+2026-04-19T16:18:42.1453266Z Purging /usr/local/lib/android/sdk/packages-list.txt
+2026-04-19T16:18:42.1757681Z Purging /usr/local/lib/android/sdk/platform-tools
+2026-04-19T16:18:42.4868273Z Purging /usr/local/lib/android/sdk/cmake
+2026-04-19T16:18:45.6048074Z Purging /usr/local/lib/android/sdk/extras
+2026-04-19T16:18:45.6192225Z Purging /usr/lib/jvm/
+2026-04-19T16:18:45.6320591Z Purging /usr/local/graalvm
+2026-04-19T16:18:45.6447615Z Purging /usr/share/java/selenium-server.jar
+2026-04-19T16:18:45.6757841Z Purging /usr/share/gradle-9.4.1
+2026-04-19T16:18:45.6881735Z Purging /usr/bin/gradle
+2026-04-19T16:18:45.7042809Z Purging /usr/share/apache-maven-3.9.14
+2026-04-19T16:18:45.7173902Z Purging /usr/share/maven-repo
+2026-04-19T16:18:45.7332019Z Purging /usr/bin/mvn
+2026-04-19T16:18:45.7459402Z Purging '/usr/share/mysql*'
+2026-04-19T16:18:45.7599286Z Purging /opt/mssql-tools
+2026-04-19T16:18:45.7795030Z Purging /usr/local/sqlpackage
+2026-04-19T16:18:45.7923184Z Purging /usr/lib/firefox
+2026-04-19T16:18:45.8049500Z Purging /usr/local/share/gecko_driver
+2026-04-19T16:18:45.8152465Z Purging /usr/local/lib/android/sdk/ndk
+2026-04-19T16:18:45.8188778Z Purging /usr/bin/geckodriver
+2026-04-19T16:18:45.8285246Z Purging /usr/bin/google-chrome
+2026-04-19T16:18:45.8330813Z Purging /usr/local/share/chromedriver-linux64
+2026-04-19T16:18:45.8422763Z Purging /usr/bin/chromedriver
+2026-04-19T16:18:45.8560443Z Purging /usr/bin/chromium
+2026-04-19T16:18:45.8693675Z Purging /usr/local/share/chromium
+2026-04-19T16:18:45.8723305Z Purging /usr/bin/chromium-browser
+2026-04-19T16:18:45.8842084Z Purging /usr/local/share/edge_driver
+2026-04-19T16:18:45.8868861Z Purging /usr/bin/msedgedriver
+2026-04-19T16:18:45.8985765Z Purging /usr/share/php
+2026-04-19T16:18:45.9013398Z Purging /etc/php
+2026-04-19T16:18:45.9113499Z Purging /usr/local/bin/phpunit
+2026-04-19T16:18:45.9141597Z Purging /usr/bin/composer
+2026-04-19T16:18:45.9254166Z Purging /home/runner/.config/composer
+2026-04-19T16:18:45.9283452Z Purging /etc/skel/.composer
+2026-04-19T16:18:45.9403669Z Purging /etc/.composer
+2026-04-19T16:18:45.9432887Z Purging /usr/local/bin/aliyun
+2026-04-19T16:18:45.9547602Z Purging /usr/local/bin/aws
+2026-04-19T16:18:45.9572689Z Purging /usr/local/bin/aws_completer
+2026-04-19T16:18:45.9707709Z Purging /usr/local/aws
+2026-04-19T16:18:47.9865387Z Purging /usr/local/aws-cli
+2026-04-19T16:18:47.9997184Z Purging /usr/local/bin/azcopy
+2026-04-19T16:18:48.0120357Z Purging /usr/local/bin/azcopy10
+2026-04-19T16:18:48.1218974Z Purging /usr/share/az_14.6.0
+2026-04-19T16:18:48.6216385Z Purging /opt/az
+2026-04-19T16:18:48.6347427Z Purging /usr/bin/az
+2026-04-19T16:18:48.6472959Z Purging /usr/share/google-cloud-sdk
+2026-04-19T16:18:48.6600580Z Purging /usr/lib/google-cloud-sdk
+2026-04-19T16:18:48.6724568Z Purging /usr/local/bin/bicep
+2026-04-19T16:18:48.6851410Z Purging /usr/local/bin/oc
+2026-04-19T16:18:48.6980659Z Purging /usr/local/bin/oras
+2026-04-19T16:18:48.7106793Z Purging /usr/local/lib/heroku
+2026-04-19T16:18:48.7230832Z Purging /usr/local/bin/hub
+2026-04-19T16:18:49.6910657Z Purging /usr/local/aws-sam-cli
+2026-04-19T16:18:49.7361473Z Purging /home/runner/.dotnet
+2026-04-19T16:18:49.8711122Z Purging /etc/skel/.dotnet/tools
+2026-04-19T16:18:49.8856413Z Purging /etc/.dotnet/tools
+2026-04-19T16:18:50.1998684Z Purging /usr/share/dotnet
+2026-04-19T16:18:50.2134465Z Purging /usr/local/bin/vcpkg
+2026-04-19T16:18:50.2259747Z Purging /usr/share/ri
+2026-04-19T16:18:51.7764990Z Purging /usr/local/n
+2026-04-19T16:18:51.7900941Z Purging /usr/local/bin/n
+2026-04-19T16:18:51.8037449Z Purging /usr/local/lib/node_modules
+2026-04-19T16:18:51.9546948Z Purging /etc/skel/.nvm
+2026-04-19T16:18:52.0432320Z Purging /home/runner/.nvm
+2026-04-19T16:18:52.2952648Z Purging /opt/pipx
+2026-04-19T16:18:52.3083366Z Purging /opt/pipx_bin
+2026-04-19T16:18:56.3416521Z Purging /usr/local/share/vcpkg
+2026-04-19T16:18:56.3561317Z Purging /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk
+2026-04-19T16:19:01.9427105Z Purging /opt/hostedtoolcache/PyPy
+2026-04-19T16:19:01.9798739Z Purging /opt/hostedtoolcache/CodeQL
+2026-04-19T16:19:06.0565716Z Purging /opt/hostedtoolcache/Ruby
+2026-04-19T16:19:10.8967063Z Purging /opt/hostedtoolcache/Python
+2026-04-19T16:19:18.4710561Z Purging /opt/hostedtoolcache/node
+2026-04-19T16:19:18.5006532Z Purging /usr/lib/llvm-14
+2026-04-19T16:19:18.5130455Z Purging /usr/local/bin/ccmake
+2026-04-19T16:19:18.5265558Z Purging /usr/local/bin/cmake
+2026-04-19T16:19:18.5465872Z Purging /usr/local/bin/cmake-gui
+2026-04-19T16:19:18.5597348Z Purging /usr/local/bin/cpack
+2026-04-19T16:19:18.5723828Z Purging /usr/local/bin/ctest
+2026-04-19T16:19:18.8328159Z Purging /usr/local/share/cmake-3.31
+2026-04-19T16:19:18.8461762Z Purging '/usr/local/*cmake*'
+2026-04-19T16:19:18.8592790Z Purging /usr/local/bin/ccmake
+2026-04-19T16:19:18.8722451Z Purging /usr/local/bin/cmake
+2026-04-19T16:19:18.8862488Z Purging /usr/local/bin/cmake-gui
+2026-04-19T16:19:19.2281368Z Purging /usr/local/doc/cmake
+2026-04-19T16:19:19.2407764Z Purging /usr/local/share/cmake-3.31
+2026-04-19T16:19:19.2548670Z Purging /opt/microsoft/powershell
+2026-04-19T16:19:19.6835515Z Purging /usr/local/share/powershell
+2026-04-19T16:19:19.6959002Z Purging /usr/share/rust
+2026-04-19T16:19:19.7079634Z Purging /home/runner/.cargo
+2026-04-19T16:19:19.7327001Z Purging /home/runner/.rustup
+2026-04-19T16:19:19.9581090Z Purging /etc/skel/.rustup
+2026-04-19T16:19:20.0532564Z Purging /etc/skel/.cargo
+2026-04-19T16:19:20.0659741Z Purging /etc/.rustup
+2026-04-19T16:19:20.0776638Z Purging /etc/.cargo
+2026-04-19T16:19:20.0893764Z Purging /usr/local/bin/stack
+2026-04-19T16:19:20.1031433Z Purging /home/runner/.ghcup
+2026-04-19T16:19:20.1145138Z Purging /usr/local/.ghcup
+2026-04-19T16:19:20.1336229Z Purging /usr/share/kotlinc
+2026-04-19T16:19:20.1449145Z Purging /usr/bin/kotlin
+2026-04-19T16:19:20.1565014Z Purging /usr/bin/kotlinc
+2026-04-19T16:19:20.1680804Z Purging /usr/bin/kotlinc-js
+2026-04-19T16:19:20.1796435Z Purging /usr/bin/kotlinc-jvm
+2026-04-19T16:19:21.7334955Z Purging /usr/local/julia1.12.6
+2026-04-19T16:19:21.7466157Z Purging /usr/bin/julia
+2026-04-19T16:19:21.8376986Z Purging /usr/share/swift
+2026-04-19T16:19:21.8509236Z Purging /usr/local/bin/swift
+2026-04-19T16:19:21.8624067Z Purging /usr/local/bin/swiftc
+2026-04-19T16:19:21.8740411Z Purging /var/cache/snapd
+2026-04-19T16:19:21.8859464Z Purging /opt/hostedtoolcache/go
+2026-04-19T16:19:21.8861546Z Purging /home/runner/snap
+2026-04-19T16:19:21.8977302Z Purging '/usr/share/firebird*'
+2026-04-19T16:19:21.9017597Z Purging /usr/share/sbt
+2026-04-19T16:19:21.9111293Z Purging /usr/bin/sbt
+2026-04-19T16:19:21.9142565Z Purging '/usr/local/share/phantomjs*'
+2026-04-19T16:19:21.9235431Z Purging /usr/local/bin/phantomjs
+2026-04-19T16:19:21.9272690Z Purging /usr/local/bin/packer
+2026-04-19T16:19:21.9364852Z Purging /usr/local/lib/lein
+2026-04-19T16:19:21.9402900Z Purging /usr/local/bin/lein
+2026-04-19T16:19:21.9500348Z Purging /usr/local/bin/pulumi
+2026-04-19T16:19:21.9524195Z Purging /usr/local/bin/pulumi-language-bun
+2026-04-19T16:19:21.9627449Z Purging /usr/local/bin/pulumi-language-dotnet
+2026-04-19T16:19:21.9652156Z Purging /usr/local/bin/pulumi-language-go
+2026-04-19T16:19:21.9753771Z Purging /usr/local/bin/pulumi-language-java
+2026-04-19T16:19:21.9779783Z Purging /usr/local/bin/pulumi-language-nodejs
+2026-04-19T16:19:21.9888306Z Purging /usr/local/bin/pulumi-language-python
+2026-04-19T16:19:21.9915939Z Purging /usr/local/bin/pulumi-language-python-exec
+2026-04-19T16:19:22.0009471Z Purging /usr/local/bin/pulumi-language-yaml
+2026-04-19T16:19:22.0039419Z Purging /usr/local/bin/pulumi-resource-pulumi-nodejs
+2026-04-19T16:19:22.0136453Z Purging /usr/local/bin/pulumi-resource-pulumi-python
+2026-04-19T16:19:22.0168299Z Purging /usr/local/bin/pulumi-watch
+2026-04-19T16:19:22.0291892Z Purging /usr/bin/conda
+2026-04-19T16:19:23.0559736Z Purging /usr/share/miniconda
+2026-04-19T16:19:33.5707887Z Purging /usr/local/lib/android/sdk/platforms
+2026-04-19T16:19:33.5709501Z Purging /usr/local/lib/android
+2026-04-19T16:19:33.9764984Z ##[endgroup]
+2026-04-19T16:19:33.9766554Z ##[group] {[-]}  Clearing Journal Logs
+2026-04-19T16:19:34.0520934Z Vacuuming done, freed 0B of archived journals from /var/log/journal.
+2026-04-19T16:19:34.0525635Z Deleted archived journal /var/log/journal/9e3a6cd2f9ab4da498d9e288eef41e6f/user-1000@00000000000000000000000000000000-00000000000032ba-00064f60d89dcf47.journal (8.0M).
+2026-04-19T16:19:34.0545822Z Deleted archived journal /var/log/journal/9e3a6cd2f9ab4da498d9e288eef41e6f/system@00000000000000000000000000000000-00000000000032bd-00064f60d9665d70.journal (8.0M).
+2026-04-19T16:19:34.0558035Z Deleted archived journal /var/log/journal/9e3a6cd2f9ab4da498d9e288eef41e6f/user-1001@00000000000000000000000000000000-0000000000003320-00064f60da8c14f4.journal (8.0M).
+2026-04-19T16:19:34.0561481Z Vacuuming done, freed 24.0M of archived journals from /var/log/journal/9e3a6cd2f9ab4da498d9e288eef41e6f.
+2026-04-19T16:19:34.0562372Z Vacuuming done, freed 0B of archived journals from /run/log/journal.
+2026-04-19T16:19:34.2987838Z ##[endgroup]
+2026-04-19T16:19:34.2988367Z ##[group]<{[>]}> Free Disk Space After Cleanup <{[<]}>
+2026-04-19T16:19:34.3230908Z Use%  Used   Avail
+2026-04-19T16:19:34.3231279Z   6% 7548M 141113M
+2026-04-19T16:19:34.3234062Z ##[endgroup]

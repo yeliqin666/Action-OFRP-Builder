@@ -1,0 +1,84 @@
+﻿2026-04-19T16:14:14.3924414Z ##[group]Run actions/checkout@v3
+2026-04-19T16:14:14.3925271Z with:
+2026-04-19T16:14:14.3925718Z   repository: yeliqin666/Action-OFRP-Builder
+2026-04-19T16:14:14.3926508Z   token: ***
+2026-04-19T16:14:14.3926913Z   ssh-strict: true
+2026-04-19T16:14:14.3927363Z   persist-credentials: true
+2026-04-19T16:14:14.3927838Z   clean: true
+2026-04-19T16:14:14.3928253Z   sparse-checkout-cone-mode: true
+2026-04-19T16:14:14.3928760Z   fetch-depth: 1
+2026-04-19T16:14:14.3929177Z   fetch-tags: false
+2026-04-19T16:14:14.3929584Z   lfs: false
+2026-04-19T16:14:14.3930216Z   submodules: false
+2026-04-19T16:14:14.3930650Z   set-safe-directory: true
+2026-04-19T16:14:14.3931314Z ##[endgroup]
+2026-04-19T16:14:14.4806494Z Syncing repository: yeliqin666/Action-OFRP-Builder
+2026-04-19T16:14:14.4808560Z ##[group]Getting Git version info
+2026-04-19T16:14:14.4809562Z Working directory is '/home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder'
+2026-04-19T16:14:14.4811055Z [command]/usr/bin/git version
+2026-04-19T16:14:14.4854489Z git version 2.53.0
+2026-04-19T16:14:14.4880105Z ##[endgroup]
+2026-04-19T16:14:14.4895247Z Temporarily overriding HOME='/home/runner/work/_temp/4dd213c8-4a47-4a9f-96c0-68c029eaa05c' before making global git config changes
+2026-04-19T16:14:14.4896714Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-19T16:14:14.4898830Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder
+2026-04-19T16:14:14.4934775Z Deleting the contents of '/home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder'
+2026-04-19T16:14:14.4938474Z ##[group]Initializing the repository
+2026-04-19T16:14:14.4941887Z [command]/usr/bin/git init /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder
+2026-04-19T16:14:14.5023743Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-04-19T16:14:14.5025686Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-04-19T16:14:14.5027235Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-04-19T16:14:14.5028583Z hint: call:
+2026-04-19T16:14:14.5029185Z hint:
+2026-04-19T16:14:14.5030541Z hint: 	git config --global init.defaultBranch <name>
+2026-04-19T16:14:14.5031437Z hint:
+2026-04-19T16:14:14.5032000Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-04-19T16:14:14.5032923Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-04-19T16:14:14.5033645Z hint:
+2026-04-19T16:14:14.5034014Z hint: 	git branch -m <name>
+2026-04-19T16:14:14.5034463Z hint:
+2026-04-19T16:14:14.5035404Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-04-19T16:14:14.5036759Z Initialized empty Git repository in /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/.git/
+2026-04-19T16:14:14.5039028Z [command]/usr/bin/git remote add origin https://github.com/yeliqin666/Action-OFRP-Builder
+2026-04-19T16:14:14.5074339Z ##[endgroup]
+2026-04-19T16:14:14.5075209Z ##[group]Disabling automatic garbage collection
+2026-04-19T16:14:14.5075875Z [command]/usr/bin/git config --local gc.auto 0
+2026-04-19T16:14:14.5101278Z ##[endgroup]
+2026-04-19T16:14:14.5101976Z ##[group]Setting up auth
+2026-04-19T16:14:14.5106388Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-19T16:14:14.5133690Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-19T16:14:14.5444259Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-19T16:14:14.5472829Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-19T16:14:14.5714703Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-04-19T16:14:14.5749618Z ##[endgroup]
+2026-04-19T16:14:14.5750802Z ##[group]Fetching the repository
+2026-04-19T16:14:14.5758223Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +3c23a378aa903be5fda235584d4ef078e0a0d06f:refs/remotes/origin/main
+2026-04-19T16:14:14.7421686Z remote: Enumerating objects: 8, done.        
+2026-04-19T16:14:14.7423031Z remote: Counting objects:  12% (1/8)        
+2026-04-19T16:14:14.7424010Z remote: Counting objects:  25% (2/8)        
+2026-04-19T16:14:14.7424959Z remote: Counting objects:  37% (3/8)        
+2026-04-19T16:14:14.7425633Z remote: Counting objects:  50% (4/8)        
+2026-04-19T16:14:14.7426219Z remote: Counting objects:  62% (5/8)        
+2026-04-19T16:14:14.7426785Z remote: Counting objects:  75% (6/8)        
+2026-04-19T16:14:14.7427423Z remote: Counting objects:  87% (7/8)        
+2026-04-19T16:14:14.7427988Z remote: Counting objects: 100% (8/8)        
+2026-04-19T16:14:14.7428601Z remote: Counting objects: 100% (8/8), done.        
+2026-04-19T16:14:14.7429210Z remote: Compressing objects:  16% (1/6)        
+2026-04-19T16:14:14.7429808Z remote: Compressing objects:  33% (2/6)        
+2026-04-19T16:14:14.7430935Z remote: Compressing objects:  50% (3/6)        
+2026-04-19T16:14:14.7431954Z remote: Compressing objects:  66% (4/6)        
+2026-04-19T16:14:14.7433002Z remote: Compressing objects:  83% (5/6)        
+2026-04-19T16:14:14.7433946Z remote: Compressing objects: 100% (6/6)        
+2026-04-19T16:14:14.7434581Z remote: Compressing objects: 100% (6/6), done.        
+2026-04-19T16:14:14.7435829Z remote: Total 8 (delta 0), reused 4 (delta 0), pack-reused 0 (from 0)        
+2026-04-19T16:14:14.7496428Z From https://github.com/yeliqin666/Action-OFRP-Builder
+2026-04-19T16:14:14.7497423Z  * [new ref]         3c23a378aa903be5fda235584d4ef078e0a0d06f -> origin/main
+2026-04-19T16:14:14.7531877Z ##[endgroup]
+2026-04-19T16:14:14.7534877Z ##[group]Determining the checkout info
+2026-04-19T16:14:14.7536234Z ##[endgroup]
+2026-04-19T16:14:14.7537287Z ##[group]Checking out the ref
+2026-04-19T16:14:14.7539047Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-04-19T16:14:14.7585605Z Switched to a new branch 'main'
+2026-04-19T16:14:14.7587335Z branch 'main' set up to track 'origin/main'.
+2026-04-19T16:14:14.7594568Z ##[endgroup]
+2026-04-19T16:14:14.7630139Z [command]/usr/bin/git log -1 --format='%H'
+2026-04-19T16:14:14.7653184Z '3c23a378aa903be5fda235584d4ef078e0a0d06f'

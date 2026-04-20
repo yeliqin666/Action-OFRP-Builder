@@ -1,0 +1,8 @@
+﻿2026-04-19T16:29:49.8531358Z ##[group]Run ls -al /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace/fox_14.1/out/target/product/
+2026-04-19T16:29:49.8532158Z [36;1mls -al /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace/fox_14.1/out/target/product/[0m
+2026-04-19T16:29:49.8532630Z [36;1mecho[0m
+2026-04-19T16:29:49.8533047Z [36;1mls -al /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace/fox_14.1/out/target/product/umi/[0m
+2026-04-19T16:29:49.8565588Z shell: /usr/bin/bash -e {0}
+2026-04-19T16:29:49.8565822Z ##[endgroup]
+2026-04-19T16:29:49.8632785Z ls: cannot access '/home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace/fox_14.1/out/target/product/': No such file or directory
+2026-04-19T16:29:49.8637142Z ##[error]Process completed with exit code 2.

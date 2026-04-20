@@ -1,0 +1,33 @@
+﻿2026-04-19T16:14:13.0898532Z Current runner version: '2.333.1'
+2026-04-19T16:14:13.0931849Z ##[group]Runner Image Provisioner
+2026-04-19T16:14:13.0933057Z Hosted Compute Agent
+2026-04-19T16:14:13.0933899Z Version: 20260213.493
+2026-04-19T16:14:13.0934735Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-04-19T16:14:13.0935932Z Build Date: 2026-02-13T00:28:41Z
+2026-04-19T16:14:13.0936964Z Worker ID: {3e4659af-2914-48e2-aa7b-7d2cda0c9467}
+2026-04-19T16:14:13.0937950Z Azure Region: eastus
+2026-04-19T16:14:13.0938856Z ##[endgroup]
+2026-04-19T16:14:13.0940855Z ##[group]Operating System
+2026-04-19T16:14:13.0941782Z Ubuntu
+2026-04-19T16:14:13.0942438Z 22.04.5
+2026-04-19T16:14:13.0943259Z LTS
+2026-04-19T16:14:13.0943906Z ##[endgroup]
+2026-04-19T16:14:13.0944672Z ##[group]Runner Image
+2026-04-19T16:14:13.0945684Z Image: ubuntu-22.04
+2026-04-19T16:14:13.0946428Z Version: 20260413.88.1
+2026-04-19T16:14:13.0948002Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20260413.88/images/ubuntu/Ubuntu2204-Readme.md
+2026-04-19T16:14:13.0950907Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20260413.88
+2026-04-19T16:14:13.0952364Z ##[endgroup]
+2026-04-19T16:14:13.0954021Z ##[group]GITHUB_TOKEN Permissions
+2026-04-19T16:14:13.0956761Z Contents: write
+2026-04-19T16:14:13.0957735Z Metadata: read
+2026-04-19T16:14:13.0958447Z ##[endgroup]
+2026-04-19T16:14:13.0961434Z Secret source: Actions
+2026-04-19T16:14:13.0962739Z Prepare workflow directory
+2026-04-19T16:14:13.1408035Z Prepare all required actions
+2026-04-19T16:14:13.1461276Z Getting action download info
+2026-04-19T16:14:13.4791732Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2026-04-19T16:14:13.6697736Z Download action repository 'rokibhasansagar/slimhub_actions@main' (SHA:c2a6e4317d3de2b623ac7395b05e9d2149e8289b)
+2026-04-19T16:14:13.9016591Z Download action repository 'pierotofy/set-swap-space@master' (SHA:fc79b3f67fa8a838184ce84a674ca12238d2c761)
+2026-04-19T16:14:14.0507107Z Download action repository 'softprops/action-gh-release@v1' (SHA:de2c0eb89ae2a093876385947365aca7b0e5f844)
+2026-04-19T16:14:14.3212529Z Complete job name: build

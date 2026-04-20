@@ -1,0 +1,51 @@
+﻿2026-04-19T16:20:14.5674902Z ##[group]Run cd /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace
+2026-04-19T16:20:14.5675513Z [36;1mcd /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace[0m
+2026-04-19T16:20:14.5676164Z [36;1mgit clone https://gitlab.com/OrangeFox/sync.git[0m
+2026-04-19T16:20:14.5676458Z [36;1mcd sync[0m
+2026-04-19T16:20:14.5676935Z [36;1m./orangefox_sync.sh --branch 14.1 --path /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace/fox_14.1[0m
+2026-04-19T16:20:14.5713922Z shell: /usr/bin/bash -e {0}
+2026-04-19T16:20:14.5714163Z ##[endgroup]
+2026-04-19T16:20:14.5776636Z Cloning into 'sync'...
+2026-04-19T16:20:15.1498484Z ./orangefox_sync.sh, v20260410
+2026-04-19T16:20:15.1512274Z **************
+2026-04-19T16:20:15.1512897Z *** WARNING***: the fox_14.1 branch is *EXPERIMENTAL*! Also, syncing will take a *VERY* long time
+2026-04-19T16:20:15.1513539Z **************
+2026-04-19T16:20:15.1513832Z -- Starting the script ...
+2026-04-19T16:20:15.1514606Z -- The new build system will be located in "/home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace/fox_14.1"
+2026-04-19T16:20:15.1529051Z -- Initialising the twrp-14 minimal manifest repo ...
+2026-04-19T16:20:16.9621101Z 
+2026-04-19T16:20:16.9622011Z repo has been initialized in /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace/fox_14.1
+2026-04-19T16:20:16.9877362Z -- Done.
+2026-04-19T16:20:16.9877901Z -- Syncing the twrp-14 minimal manifest repo ...
+2026-04-19T16:29:12.6569418Z repo sync has finished successfully.
+2026-04-19T16:29:12.7077592Z -- Done.
+2026-04-19T16:29:12.7078309Z -- Patching the twrp-14 minimal manifest for building OrangeFox for native android-14 devices ...
+2026-04-19T16:29:12.7281014Z patching file core/Makefile
+2026-04-19T16:29:12.7292093Z patching file core/config.mk
+2026-04-19T16:29:12.7296219Z patching file make/envsetup.sh
+2026-04-19T16:29:12.7303654Z -- The twrp-14 minimal manifest has been patched successfully
+2026-04-19T16:29:12.7304312Z -- Patching the twrp-14 system/vold for building OrangeFox for native android-14 devices ...
+2026-04-19T16:29:12.7316242Z patching file Android.bp
+2026-04-19T16:29:12.7319333Z patching file Decrypt.cpp
+2026-04-19T16:29:12.7322518Z patching file KeystoreInfo.cpp
+2026-04-19T16:29:12.7324444Z patching file Weaver1.cpp
+2026-04-19T16:29:12.7326824Z patching file Weaver1.h
+2026-04-19T16:29:12.7333442Z -- The twrp-14 system/vold has been patched successfully
+2026-04-19T16:29:12.7334191Z -- Patching the twrp-14 .repo/manifests for building OrangeFox for native android-14 devices ...
+2026-04-19T16:29:12.7344630Z patching file remove-minimal.xml
+2026-04-19T16:29:12.7348294Z -- The twrp-14 .repo/manifests has been patched successfully
+2026-04-19T16:29:12.7351124Z -- Cloning se_omapi ...
+2026-04-19T16:29:12.7365386Z Cloning into 'external/se_omapi'...
+2026-04-19T16:29:13.2619303Z -- se_omapi has been cloned successfully
+2026-04-19T16:29:13.2636544Z -- Moving the TWRP recovery sources to /tmp
+2026-04-19T16:29:13.2687002Z -- Pulling the OrangeFox recovery sources ...
+2026-04-19T16:29:13.2699346Z Cloning into 'recovery'...
+2026-04-19T16:29:18.6739879Z -- The OrangeFox sources have been cloned successfully
+2026-04-19T16:29:18.6740684Z -- Cleaning up the TWRP recovery sources from /tmp
+2026-04-19T16:29:18.7745938Z -- Preparing for cloning the OrangeFox vendor tree ...
+2026-04-19T16:29:18.7769441Z -- Pulling the OrangeFox vendor tree ...
+2026-04-19T16:29:18.7782737Z Cloning into 'recovery'...
+2026-04-19T16:29:25.7646468Z -- The OrangeFox vendor tree has been cloned successfully
+2026-04-19T16:29:25.7668629Z -- Stop time =Sun Apr 19 16:29:25 UTC 2026
+2026-04-19T16:29:25.7669108Z -- Start time=Sun Apr 19 16:20:15 UTC 2026
+2026-04-19T16:29:25.7669603Z -- Now, clone your device trees to the correct locations!

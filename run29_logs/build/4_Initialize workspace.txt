@@ -1,0 +1,6 @@
+﻿2026-04-19T16:19:34.3293953Z ##[group]Run mkdir workspace
+2026-04-19T16:19:34.3294248Z [36;1mmkdir workspace[0m
+2026-04-19T16:19:34.3294448Z [36;1mcd workspace[0m
+2026-04-19T16:19:34.3294717Z [36;1mecho "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT[0m
+2026-04-19T16:19:34.3321548Z shell: /usr/bin/bash -e {0}
+2026-04-19T16:19:34.3321794Z ##[endgroup]

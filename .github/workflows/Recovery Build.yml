@@ -83,6 +83,25 @@ jobs:
         ./orangefox_sync.sh --branch ${{ github.event.inputs.MANIFEST_BRANCH }} --path ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
+    - name: Switch vendor/recovery to R12 branch
+      run: |
+        cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
+        VENDOR_DIR="vendor/recovery"
+        if [ "${{ github.event.inputs.MANIFEST_BRANCH }}" = "14.1" ]; then
+          R12_BRANCH="fox_14.1-R12-new"
+        elif [ "${{ github.event.inputs.MANIFEST_BRANCH }}" = "12.1" ]; then
+          R12_BRANCH="fox_12.1-R12-new"
+        else
+          echo "[WARN] Unknown manifest branch, skipping R12 vendor switch"
+          exit 0
+        fi
+        echo "[INFO] Switching $VENDOR_DIR from fox_${{ github.event.inputs.MANIFEST_BRANCH }} to $R12_BRANCH"
+        cd "$VENDOR_DIR"
+        git fetch origin "$R12_BRANCH"
+        git checkout "$R12_BRANCH"
+        echo "[INFO] vendor/recovery now on $(git branch --show-current) @ $(git log --oneline -1)"
+      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
+
     - name: Patch openaes for modern clang (C23 prototype rules)
       run: |
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}

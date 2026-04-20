@@ -1,0 +1,16 @@
+﻿2026-04-19T16:29:49.7414935Z ##[group]Run cd /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace/fox_14.1
+2026-04-19T16:29:49.7415985Z [36;1mcd /home/runner/work/Action-OFRP-Builder/Action-OFRP-Builder/workspace/fox_14.1[0m
+2026-04-19T16:29:49.7416647Z [36;1mset +e[0m
+2026-04-19T16:29:49.7416952Z [36;1msource build/envsetup.sh[0m
+2026-04-19T16:29:49.7417371Z [36;1mexport ALLOW_MISSING_DEPENDENCIES=true[0m
+2026-04-19T16:29:49.7417806Z [36;1mexport LC_ALL=C[0m
+2026-04-19T16:29:49.7418137Z [36;1mexport FOX_BUILD_DEVICE=umi[0m
+2026-04-19T16:29:49.7418486Z [36;1mset -e[0m
+2026-04-19T16:29:49.7418936Z [36;1mlunch twrp_lmi-eng && mka adbd recoveryimage -j$(nproc --all)[0m
+2026-04-19T16:29:49.7460355Z shell: /usr/bin/bash -e {0}
+2026-04-19T16:29:49.7460616Z ##[endgroup]
+2026-04-19T16:29:49.7933560Z including device/xiaomi/umi/vendorsetup.sh
+2026-04-19T16:29:49.8471100Z 
+2026-04-19T16:29:49.8471548Z Invalid lunch combo: twrp_lmi-eng
+2026-04-19T16:29:49.8472072Z Valid combos must be of the form <product>-<release>-<variant>
+2026-04-19T16:29:49.8487029Z ##[error]Process completed with exit code 1.
