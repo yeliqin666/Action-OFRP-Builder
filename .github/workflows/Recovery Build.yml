@@ -133,6 +133,19 @@ jobs:
         PY
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
+    - name: Patch system/vold for metadata+FBE decryption fix
+      run: |
+        cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
+        cd system/vold
+        echo "[INFO] Current vold HEAD: $(git log --oneline -1)"
+        git fetch https://github.com/yeliqin666/android_system_vold.git orangefox-lmi-decrypt-fixes
+        MERGE_BASE=$(git merge-base HEAD FETCH_HEAD)
+        echo "[INFO] Merge base: $MERGE_BASE"
+        git cherry-pick ${MERGE_BASE}..FETCH_HEAD --no-edit
+        echo "[INFO] system/vold patched. New HEAD:"
+        git log --oneline -5
+      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
+
     - name: Clone device tree
       run: |
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
