@@ -139,6 +139,8 @@ jobs:
         cd system/vold
         echo "[INFO] Current vold HEAD: $(git log --oneline -1)"
         # Commit any uncommitted OrangeFox patches so cherry-pick can proceed
+        git config user.email "ci@orangefox.build"
+        git config user.name "OrangeFox CI"
         git add -A
         git diff --cached --quiet || git commit -m "OrangeFox: auto-commit local patches" --no-verify
         echo "[INFO] After OrangeFox commit: $(git log --oneline -1)"
