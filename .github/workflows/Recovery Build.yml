@@ -138,6 +138,10 @@ jobs:
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         cd system/vold
         echo "[INFO] Current vold HEAD: $(git log --oneline -1)"
+        # Commit any uncommitted OrangeFox patches so cherry-pick can proceed
+        git add -A
+        git diff --cached --quiet || git commit -m "OrangeFox: auto-commit local patches" --no-verify
+        echo "[INFO] After OrangeFox commit: $(git log --oneline -1)"
         git fetch --depth=50 https://github.com/yeliqin666/android_system_vold.git orangefox-14.1-lmi-decrypt-fixes
         echo "[INFO] FETCH_HEAD: $(git log --oneline -1 FETCH_HEAD)"
         git cherry-pick FETCH_HEAD --no-edit
