@@ -52,7 +52,7 @@ jobs:
  
     # You might want to Checkout your repo first, but not mandatory
     - name: Check Out
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
     - name: Cleanup
@@ -81,6 +81,31 @@ jobs:
         git clone ${{ github.event.inputs.SYNC_URL }}
         cd sync
         ./orangefox_sync.sh --branch ${{ github.event.inputs.MANIFEST_BRANCH }} --path ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
+      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
+
+    - name: Patch openaes for modern clang (C23 prototype rules)
+      run: |
+        cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
+        python3 - <<'PY'
+        from pathlib import Path
+
+        base = Path('bootable/recovery/openaes/src/isaac')
+        rand_h = base / 'rand.h'
+        rand_c = base / 'rand.c'
+
+        h = rand_h.read_text(encoding='utf-8')
+        h = h.replace('void randinit(/*_ randctx *r, word flag _*/);', 'void randinit(randctx *r, word flag);')
+        h = h.replace('void isaac(/*_ randctx *r _*/);', 'void isaac(randctx *r);')
+        rand_h.write_text(h, encoding='utf-8')
+
+        c = rand_c.read_text(encoding='utf-8')
+        c = c.replace('void\t isaac(ctx)\nrandctx *ctx;', 'void isaac(randctx *ctx)')
+        c = c.replace('void randinit(ctx, flag)\nrandctx *ctx;\nword flag;', 'void randinit(randctx *ctx, word flag)')
+        rand_c.write_text(c, encoding='utf-8')
+
+        print('Patched:', rand_h)
+        print('Patched:', rand_c)
+        PY
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
     - name: Clone device tree
