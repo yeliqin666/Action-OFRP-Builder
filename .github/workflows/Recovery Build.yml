@@ -88,20 +88,26 @@ jobs:
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         python3 - <<'PY'
         from pathlib import Path
+        import re
 
         base = Path('bootable/recovery/openaes/src/isaac')
         rand_h = base / 'rand.h'
         rand_c = base / 'rand.c'
 
         h = rand_h.read_text(encoding='utf-8')
-        h = h.replace('void randinit(/*_ randctx *r, word flag _*/);', 'void randinit(randctx *r, word flag);')
-        h = h.replace('void isaac(/*_ randctx *r _*/);', 'void isaac(randctx *r);')
+        h = re.sub(r'void\s+randinit\s*\(/\*_\s*randctx\s*\*r,\s*word\s*flag\s*_\*/\s*\);', 'void randinit(randctx *r, word flag);', h)
+        h = re.sub(r'void\s+isaac\s*\(/\*_\s*randctx\s*\*r\s*_\*/\s*\);', 'void isaac(randctx *r);', h)
         rand_h.write_text(h, encoding='utf-8')
 
         c = rand_c.read_text(encoding='utf-8')
-        c = c.replace('void\t isaac(ctx)\nrandctx *ctx;', 'void isaac(randctx *ctx)')
-        c = c.replace('void randinit(ctx, flag)\nrandctx *ctx;\nword flag;', 'void randinit(randctx *ctx, word flag)')
+        c = re.sub(r'void\s+isaac\s*\(\s*ctx\s*\)\s*\n\s*randctx\s*\*\s*ctx\s*;', 'void isaac(randctx *ctx)', c)
+        c = re.sub(r'void\s+randinit\s*\(\s*ctx\s*,\s*flag\s*\)\s*\n\s*randctx\s*\*\s*ctx\s*;\s*\n\s*word\s+flag\s*;', 'void randinit(randctx *ctx, word flag)', c)
         rand_c.write_text(c, encoding='utf-8')
+
+        if 'void randinit(randctx *r, word flag);' not in h or 'void isaac(randctx *r);' not in h:
+            raise SystemExit('Patch failed: rand.h prototype replacement did not apply')
+        if 'void isaac(randctx *ctx)' not in c or 'void randinit(randctx *ctx, word flag)' not in c:
+            raise SystemExit('Patch failed: rand.c prototype replacement did not apply')
 
         print('Patched:', rand_h)
         print('Patched:', rand_c)
@@ -131,6 +137,8 @@ jobs:
     - name: Building recovery
       run: |
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
+        export JAVA_HOME="$(dirname "$(dirname "$(readlink -f "$(command -v javac)")")")"
+        export PATH="$JAVA_HOME/bin:$PATH"
         set +e
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
