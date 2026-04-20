@@ -138,7 +138,7 @@ jobs:
         cd ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         cd system/vold
         echo "[INFO] Current vold HEAD: $(git log --oneline -1)"
-        git fetch https://github.com/yeliqin666/android_system_vold.git orangefox-lmi-decrypt-fixes
+        git fetch https://github.com/yeliqin666/android_system_vold.git orangefox-14.1-lmi-decrypt-fixes
         MERGE_BASE=$(git merge-base HEAD FETCH_HEAD)
         echo "[INFO] Merge base: $MERGE_BASE"
         git cherry-pick ${MERGE_BASE}..FETCH_HEAD --no-edit
